@@ -1,44 +1,40 @@
-from datetime import datetime as dt
+from .creature import Body, Mind, Creature
 
 __all__ = [
-    'StatesCalculator'
+    'StatesManager',
+    'StatesCalculator',
 ]
 
 
 class BodyState:
-    def __init__(self,
-                 timestamp: dt,
-                 health:int,
-                 stamina:int,
-                 hunger: int,
-                 thirst: int):
-        self.timestamp = timestamp
-        self.stamina = stamina
-        self.health = health
-        self.hunger = hunger
-        self.thirst = thirst
+    """
+    """
+    def to_dict(self) -> dict:
+        return {}
 
 
 class MindState:
-    def __init__(self,
-                 timestamp: dt,
-                 joy: int,
-                 anger: int,
-                 pattern):
-        self.timestamp = timestamp
-        self.joy = joy
-        self.anger = anger
-        self.pattern = pattern
+    """
+    """
+    def to_dict(self) -> dict:
+        return {}
 
 
 class StatesManager:
-    def __init__(self,
-                 body_history: list[BodyState],
-                 mind_last: MindState):
-        self.body_history = body_history
-        self.mind_last = mind_last
+    """
+    """
+    def to_dict(self) -> dict:
+        return {}
 
 
 class StatesCalculator:
-    pass
+    """
+    """
+    def _new_body(self) -> Body:
+        """"""
 
+    def _new_mind(self) -> Mind:
+        """"""
+
+    def new_creature(self) -> Creature:
+        """"""
