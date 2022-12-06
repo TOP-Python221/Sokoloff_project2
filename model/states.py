@@ -6,13 +6,19 @@ __all__ = [
 ]
 
 
+# ДОБАВИТЬ: объявления классов Ranges и KindParameters
+
+
+# ДОБАВИТЬ: поля согласно модели (используйте декоратор dataclass)
 class BodyState:
     """
     """
+
     def to_dict(self) -> dict:
         return {}
 
 
+# ДОБАВИТЬ: поля согласно модели (используйте декоратор dataclass)
 class MindState:
     """
     """
@@ -23,6 +29,8 @@ class MindState:
 class StatesManager:
     """
     """
+    # ДОБАВИТЬ: конструктор
+
     def to_dict(self) -> dict:
         return {}
 

@@ -1,6 +1,9 @@
 from abc import ABC
 
+# УДАЛИТЬ: это бессмыслица
 import self as self
+
+# ИСПРАВИТЬ: следите за именами, что вы импортируете — ваш файл называется constans.py
 from utils.constant import KindActions
 
 __all__ = [
@@ -9,14 +12,16 @@ __all__ = [
     'Mind',
 ]
 
+# УДАЛИТЬ: это скорее всего тоже бессмыслица, если только вы не установили какой-то внешний модуль
 import patterns as patterns
 
 
 class Body:
     """
+    # ДОБАВИТЬ: документацию класса
     """
-
     def __init__(self,
+                 # ДОБАВИТЬ: параметры и атрибуты согласно модели
                  health: int,
                  stamina: int,
                  hunger: int,
@@ -30,11 +35,15 @@ class Body:
         """Собирает изменения за тик"""
         return {'health': 2, 'stamina': -3, 'hunger': 4, 'thirst': 2}
 
-class Mind:
 
+class Mind:
+    """
+    # ДОБАВИТЬ: документацию класса
+    """
     patterns = patterns
 
     def __init__(self,
+                 # ДОБАВИТЬ: параметры и атрибуты согласно модели
                  joy: int,
                  anger: int):
         self.joy = joy
@@ -47,7 +56,7 @@ class Mind:
 
 class Creature(ABC):
     """
-
+    # ДОБАВИТЬ: документацию класса
     """
     def __init__(self,
                  kind_parameters: 'Kindparameters',
@@ -57,11 +66,15 @@ class Creature(ABC):
         self.body = body
         self.mind = mind
 
+    # ДОБАВИТЬ: документацию свойства
     @property
     def age(self):
-        pass
+        """"""
+        # ДОБАВИТЬ: реализацию свойства
+
 
     def apply_tick_changes(self):
+        # ДОБАВИТЬ: документацию метода
         """"""
         for state in (self.body, self.mind):
             for attr, delta in state.tick_changes(self.__kind).items():
@@ -74,9 +87,10 @@ class Creature(ABC):
     def mainloop(self):
         """"""
 
+
 class CreatureActions(Creature):
     """
-
+    # ДОБАВИТЬ: документацию класса
     """
     def run_at_night(self):
         """"""
@@ -104,7 +118,7 @@ class Bear(Creature):
     pass
 
 
-
+# УДАЛИТЬ: зачем второй раз объявляете?
 class CreatureActions(Creature):
     pass
 
