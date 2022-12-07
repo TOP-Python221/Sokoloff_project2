@@ -4,7 +4,8 @@ from abc import ABC
 import self as self
 
 # ИСПРАВИТЬ: следите за именами, что вы импортируете — ваш файл называется constans.py
-from utils.constant import KindActions
+#Все равно ругается pycharm
+from utils.constans import KindActions
 
 __all__ = [
     'Creature',
@@ -70,6 +71,7 @@ class Creature(ABC):
     @property
     def age(self):
         """"""
+        return
         # ДОБАВИТЬ: реализацию свойства
 
 
