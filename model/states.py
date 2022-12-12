@@ -13,12 +13,9 @@ __all__ = [
 ]
 
 
-# ДОБАВИТЬ: объявления классов Ranges и KindParameters
-class Ranges:
-    pass
 
-class KindParamerters:
-    pass
+
+
 
 
 
@@ -66,41 +63,71 @@ class StatesManager:
     def to_dict(self) -> dict:
         return {}
 
-class Ranges:
-    def __init__(self,
-                 health_ranges: ParamRanges,
-                 stamina_ranges:ParamRanges,
-                 hunger_ranges:ParamRanges,
-                 thirst_ranges:ParamRanges):
-        self.health = health_ranges
-        self.stamina = stamina_ranges
-        self.hunger = hunger_ranges
-        self.thirst = thirst_ranges
 
-    def __int__(self,
-                kind_title: str,
-                maturation_days: MatureDays,
-                **mature_ranges: RangesDict):
-        self.title = kind_title
-        if len(maturation_days) == 3:
-            self.maturation = Matureness.mammals()
-        elif len(maturation_days) == 4:
-            self.maturation = list(Matureness)
-        else:
-            raise Exception("'matiration_days' argument should be of 3 or 4 numbers lenght")
-        self.mature_days = (0,) + tuple(maturation_days)
-        for attr in  self.maturation:
-            setattr(self, attr, self.__class__.Ranges(
-                mature_ranges[attr]['health'],
-                mature_ranges[attr]['stamina'],
-                mature_ranges[attr]['hunger'],
-                mature_ranges[attr]['thirst']
-            ))
-    def age_ranges(self, days: int) -> Ranges:
-        """"""
-        for age, attr in zip(self.mature_days, self.maturation):
-            if days % age:
-                return getattr(self,attr)
+class KindParamerters:
+    """"""
+    def __init__(self,
+                 title: str,
+                 maturity: tuple,
+                 egg: Ranges,
+                 cub: Ranges,
+                 young: Ranges,
+                 aduilt:Ranges,
+                 elder:Ranges):
+        self.title = title
+        self.maturity = maturity
+        self.egg = egg
+        self.cub = cub
+        self.young = young
+        self.adult = aduilt
+        self.elder = elder
+
+    @property
+    def age_ranges() -> Ranges:
+    """"""
+    class Ranges:
+        """Перечисляет физические параметры существа"""
+        def __init__(self,
+                    health_ranges: ParamRanges,
+                    stamina_ranges:ParamRanges,
+                    hunger_ranges:ParamRanges,
+                    thirst_ranges:ParamRanges):
+            self.health = health_ranges
+            self.stamina = stamina_ranges
+            self.hunger = hunger_ranges
+            self.thirst = thirst_ranges
+
+        def __int__(self,
+                    kind_title: str,
+                    maturation_days: MatureDays,
+                    **mature_ranges: RangesDict):
+            self.title = kind_title
+            if len(maturation_days) == 3:
+                self.maturation = Matureness.mammals()
+            elif len(maturation_days) == 4:
+                self.maturation = list(Matureness)
+            else:
+                raise Exception("'matiration_days' argument should be of 3 or 4 numbers lenght")
+            self.mature_days = (0,) + tuple(maturation_days)
+            for attr in  self.maturation:
+                setattr(self, attr, self.__class__.Ranges(
+                    mature_ranges[attr]['health'],
+                    mature_ranges[attr]['stamina'],
+                    mature_ranges[attr]['hunger'],
+                    mature_ranges[attr]['thirst']
+                ))
+        def age_ranges(self, days: int):
+            """"""
+            for age, attr in zip(self.mature_days, self.maturation):
+                if days % age:
+                    return getattr(self,attr)
+
+
+
+
+
+
+
 
 
 class StatesCalculator:

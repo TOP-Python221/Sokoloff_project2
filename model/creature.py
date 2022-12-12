@@ -1,10 +1,7 @@
 from abc import ABC
 
-# УДАЛИТЬ: это бессмыслица
-import self as self
-
 # ИСПРАВИТЬ: следите за именами, что вы импортируете — ваш файл называется constans.py
-#Все равно ругается pycharm
+# Все равно ругается pycharm
 from utils.constans import KindActions
 
 __all__ = [
@@ -13,16 +10,14 @@ __all__ = [
     'Mind',
 ]
 
-# УДАЛИТЬ: это скорее всего тоже бессмыслица, если только вы не установили какой-то внешний модуль
-import patterns as patterns
-
 
 class Body:
     """
-    # ДОБАВИТЬ: документацию класса
+    Изначальные физиоолгические параметры
     """
+
     def __init__(self,
-                 # ДОБАВИТЬ: параметры и атрибуты согласно модели
+
                  health: int,
                  stamina: int,
                  hunger: int,
@@ -39,12 +34,9 @@ class Body:
 
 class Mind:
     """
-    # ДОБАВИТЬ: документацию класса
+    Психологические параметры
     """
-    patterns = patterns
-
     def __init__(self,
-                 # ДОБАВИТЬ: параметры и атрибуты согласно модели
                  joy: int,
                  anger: int):
         self.joy = joy
@@ -57,7 +49,7 @@ class Mind:
 
 class Creature(ABC):
     """
-    # ДОБАВИТЬ: документацию класса
+    Создание существа
     """
     def __init__(self,
                  kind_parameters: 'Kindparameters',
@@ -74,7 +66,6 @@ class Creature(ABC):
         return
         # ДОБАВИТЬ: реализацию свойства
 
-
     def apply_tick_changes(self):
         # ДОБАВИТЬ: документацию метода
         """"""
@@ -83,17 +74,18 @@ class Creature(ABC):
                 new_value = getattr(self.body, attr) + delta
                 setattr(self.body, attr, new_value)
 
-
         # tired()
         # sleep()
+
     def mainloop(self):
         """"""
 
 
 class CreatureActions(Creature):
     """
-    # ДОБАВИТЬ: документацию класса
+    Хранит состояние существа
     """
+
     def run_at_night(self):
         """"""
 
@@ -123,4 +115,3 @@ class Bear(Creature):
 # УДАЛИТЬ: зачем второй раз объявляете?
 class CreatureActions(Creature):
     pass
-

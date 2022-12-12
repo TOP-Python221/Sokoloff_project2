@@ -5,6 +5,7 @@ from typing import Annotated, TypedDict
 
 
 class Kind(Enum):
+    """Глобальные переменные"""
     CAT = 'cat'
     DOG = 'dog'
     FOX = 'fox'
@@ -16,6 +17,7 @@ class Kind(Enum):
 
 
 class Matureness(str, Enum):
+    """Стадии взросления"""
     EGG = 'egg'
     CUB = 'cub'
     YOUNG = 'young'
@@ -23,6 +25,7 @@ class Matureness(str, Enum):
     ELDER = 'elder'
 
     @classmethod
+    #Все стадии кроме яйца
     def mammals(cls):
         res = list(cls)
         res.remove(cls.EGG)
