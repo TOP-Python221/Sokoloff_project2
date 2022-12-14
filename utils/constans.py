@@ -1,11 +1,18 @@
+__all__ = [
+    'Kind',
+    'DEBUG'
+]
+
+# импорт из стандартной библиотеки
+from collections.abc import Sequence, Callable
 from enum import Enum
 from pathlib import Path
-from collections.abc import Sequence, Callable
+from re import compile as reg_pattern_compile
+from sys import path
 from typing import Annotated, TypedDict
 
 
 class Kind(Enum):
-    """Глобальные переменные"""
     CAT = 'cat'
     DOG = 'dog'
     FOX = 'fox'
@@ -17,29 +24,36 @@ class Kind(Enum):
 
 
 class Matureness(str, Enum):
-    """Стадии взросления"""
-    EGG = 'egg'
     CUB = 'cub'
     YOUNG = 'young'
     ADULT = 'adult'
     ELDER = 'elder'
 
-    @classmethod
-    #Все стадии кроме яйца
-    def mammals(cls):
-        res = list(cls)
-        res.remove(cls.EGG)
-        return res
+
+BASE_DIR = Path(path[0])
+
+DEBUG = False
+
+separated_floats_pattern = reg_pattern_compile(
+    r'^((?P<float>\d+\.\d+)(?P<sep>[,; ])?){2,}$'
+)
 
 
 pathlike = str | Path
-
-KindActions = dict[Kind, Sequence[Callable]]
-ParamRanges = Sequence[Annotated[Sequence[int], 2]]
+Actions = Sequence[Callable]
+KindActions = dict[Kind, Actions]
+ParamRange = Annotated[Sequence[float], 2]
+ParamRanges = Sequence[ParamRange]
+ParamRangesInfluences = dict[str, dict[str, float]]
 RangesDict = TypedDict('RangesDict', {
-    'health': ParamRanges,
-    'stamina': ParamRanges,
-    'hunger': ParamRanges,
-    'thirst': ParamRanges
+    'health': ParamRangesInfluences,
+    'stamina': ParamRangesInfluences,
+    'hunger': ParamRangesInfluences,
+    'thirst': ParamRangesInfluences,
+    'intestine': ParamRangesInfluences,
+    'activity': ParamRanges,
+    'anxiety': ParamRanges,
+    'anger_coeff': float,
+    'joy_coeff': float,
 })
 MatureDays = Annotated[Sequence[int], 3] | Annotated[Sequence[int], 4]

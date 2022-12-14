@@ -3,7 +3,10 @@ from datetime import datetime as dt
 
 
 from .creature import Body, Mind, Creature
-from utils.constans import Kind, Matureness, ParamRanges, MatureDays, RangesDict
+from utils.constans import Kind, Matureness, MatureDays, RangesDict
+
+import utils.constans as uc
+import utils.types as ut
 
 
 __all__ = [
@@ -64,6 +67,10 @@ class StatesManager:
         return {}
 
 
+class DictOfRanges:
+    pass
+
+
 class KindParamerters:
     """"""
     def __init__(self,
@@ -84,18 +91,32 @@ class KindParamerters:
 
     @property
     def age_ranges() -> Ranges:
-    """"""
+        """"""
     class Ranges:
         """Перечисляет физические параметры существа"""
         def __init__(self,
-                    health_ranges: ParamRanges,
-                    stamina_ranges:ParamRanges,
-                    hunger_ranges:ParamRanges,
-                    thirst_ranges:ParamRanges):
-            self.health = health_ranges
-            self.stamina = stamina_ranges
-            self.hunger = hunger_ranges
-            self.thirst = thirst_ranges
+                     health: DictOfRanges,
+                     stamina: DictOfRanges,
+                     hunger: DictOfRanges,
+                     thirst:DictOfRanges,
+                     insestense: DictOfRanges,
+                     joy: ParamRange = (0,100),
+                     joy_coeff: float,
+                     activity: ParamRange,
+                     anger: ParamRange = (0, 100),
+                     anger_coeff: float,
+                     anxienty: ParamRange):
+            self.health = health
+            self.stamina = stamina
+            self.hunger = hunger
+            self.thirst = thirst
+            self.insestense = insestense
+            self.joy = joy
+            self.joy_coeff = joy_coeff
+            self.activity = activity
+            self.anger = anger
+            self.anger_coeff = anger_coeff
+            self.anxienty = anxienty
 
         def __int__(self,
                     kind_title: str,
@@ -124,7 +145,7 @@ class KindParamerters:
 
 
 
-
+#__iter__()
 
 
 
