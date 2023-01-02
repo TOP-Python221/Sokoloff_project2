@@ -1,16 +1,28 @@
+from dataclasses import dataclass
+from math import floor
+from threading import Thread, Event
+from time import sleep
+
 from abc import ABC
 from datetime import datetime as dt
 
+from scr.model import data as md
+from scr.model import files_io as fio
 
 # Все равно ругается pycharm
-from utils.constans import KindActions
+from src.utils import constans as us
+from scr.utils import functions as uf
+from scr.utils import tpes as ut
+
+
+
 
 __all__ = {
     'CreatureFactory',
     'Creature', }
 
 
-
+@dataclass
 class Body:
     """
     Изначальные физиоолгические параметры

@@ -5,7 +5,7 @@ from datetime import datetime as dt
 
 from .states import StatesManager,KindParamrters
 # ИСПРАВИТЬ: следите за именами, что вы импортируете — ваш файл называется constans.py
-from utils.constans import pathlike
+from src.utils.constans import pathlike
 
 __all__ = [
     'PersistenceManager',

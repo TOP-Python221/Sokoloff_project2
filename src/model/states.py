@@ -3,11 +3,7 @@ from datetime import datetime as dt
 
 
 from .creature import Body, Mind, Creature
-from utils.constans import Kind, Matureness, MatureDays, RangesDict
-
-import utils.constans as uc
-import utils.types as ut
-
+from src.utils.constans import Kind, Matureness, MatureDays, RangesDict
 
 __all__ = [
     'KindParamerters'

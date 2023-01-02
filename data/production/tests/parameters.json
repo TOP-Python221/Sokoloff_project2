@@ -1,0 +1,131 @@
+{
+  "cat": {
+    "title": "cat",
+    "maturation": [3, 10, 39, 45],
+    "ranges": {
+      "cub": {
+        "health": {
+          "1, 2":{
+        "stamina": "-1",
+        "hunger": "0",
+        "thirst": "2",
+        "joy": "-100",
+        "activity": "-1/24",
+        "aner": "-100",
+        "anxienty": "-1/24"
+      },
+      "2, 7": {
+        "stamina":"0" ,
+        "hinger": "2",
+        "thirst": "3",
+        "joy": "-5",
+        "activity": "-1/120",
+        "anger": "0",
+        "anxienty": "1/240"
+      },
+      "7,19": {
+        "stamina": "0",
+        "hunger": "2",
+        "thirst": "3",
+        "joy": "0",
+        "activity": "1/240",
+        "anger": "0",
+        "anxienty": "0"
+      },
+      "19,20": {
+        "stamina": "3",
+        "hunger": "2",
+        "thirst": "2",
+        "joy": "1",
+        "activity": "0",
+        "anxienty": "-1/240"
+      }
+    },
+    "stamina": {
+      "0,1": {
+       "health": "-1/24",
+       "hunger": "3",
+       "thirst": "3"
+    },
+      "1,9":{
+        "health": "0",
+        "hunger": "1",
+        "thirst": "1"
+      },
+      "9,15": {
+        "health": "0",
+        "hunger": "1",
+        "thirst": "1"
+      }
+    },
+    "hunger": {
+      "30, 29": {
+        "health": "-2/24",
+        "stamina": "-7/24",
+        "insestense": "-1",
+        "joy": "-8",
+        "activity": "-0,2",
+        "anger": "8",
+        "anxienty": "0.1"
+      },
+     "29,25": {
+       "health": "-1/24",
+       "stamina": "0",
+       "insestanse": "0",
+       "joy": "-5",
+       "activity": "-0.1",
+       "anger": "0",
+       "anxienty": "0.1"
+     },
+     "25, 11"
+    }
+    }
+
+
+    }
+      },
+
+
+
+
+
+
+
+
+  "turtle": {
+    "title": "черепаха",
+    "maturation": [2, 10, 22, 47],
+    "ranges": {
+      "egg": {
+        "health": [],
+        "stamina": [],
+        "hunger": [],
+        "thirst": []
+      },
+      "cub": {
+        "health": [[1,1], [2,13], [14,29], [30,30]],
+        "stamina": [],
+        "hunger": [],
+        "thirst": []
+      },
+      "young": {
+        "health": [],
+        "stamina": [],
+        "hunger": [],
+        "thirst": []
+      },
+      "adult": {
+        "health": [],
+        "stamina": [],
+        "hunger": [],
+        "thirst": []
+      },
+      "elder": {
+        "health": [],
+        "stamina": [],
+        "hunger": [],
+        "thirst": []
+      }
+    }
+  }
+}
