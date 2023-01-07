@@ -62,7 +62,7 @@
       "30, 29": {
         "health": "-2/24",
         "stamina": "-7/24",
-        "insestense": "-1",
+        "intestine": "-1",
         "joy": "-8",
         "activity": "-0,2",
         "anger": "8",
@@ -71,19 +71,292 @@
      "29,25": {
        "health": "-1/24",
        "stamina": "0",
-       "insestanse": "0",
+       "intestine": "0",
        "joy": "-5",
        "activity": "-0.1",
        "anger": "0",
        "anxienty": "0.1"
      },
-     "25, 11"
-    }
-    }
-
-
-    }
+     "25, 11": {
+       "health": "0",
+       "sstamina": "-2/24",
+       "intestine": "1",
+       "joy": "-1",
+       "activity": "0",
+       "anger": "0",
+       "anxienty": "0.1"
+     },
+     "11, 5": {
+       "health": "0",
+       "stamina": "1",
+       "intestine": "2",
+       "joy": "1",
+       "activity": "0.1",
+       "anger": "-2",
+       "anxienty": "0"
+     }
+     },
+      "5, 0":{
+        "helth": "1/24",
+        "stamina": "1",
+        "intestine": "2",
+        "joy": "1",
+        "activity": "0",
+        "anger": "-2",
+        "anxienty": "0.1"
+     },
+      "thirst":{
+        "30, 29": {
+          "health": "-5/24",
+          "stamina": "-10/24",
+          "joy": "-6",
+          "activity": "-5/10",
+          "anger": "10",
+          "anxienty": "3/10"
+        },
+        "29, 20":{
+          "health": "-1/24",
+          "stamina": "-2",
+          "joy": "-6",
+          "activity": "-3/10",
+          "anger": "5",
+          "anxienty": "3/20"
+        },
+        "20, 6": {
+          "health": "-1/24",
+          "stamina": "-2",
+          "joy": ",-6",
+          "activity": "-5/10",
+          "anger": "10",
+          "anxienty": "0"
+        },
+        "6,0": {
+          "health": "0",
+          "stammina": "1",
+          "joy": "0",
+          "activity": "0",
+          "anger": "0",
+          "anxienty": "0"
+        },
+        "intestine": {
+          "30,28": {
+            "health": "-3/24",
+            "stamina": "-2/24",
+            "hunger": "-1",
+            "joy": "-2",
+            "anxienty": "1/10"
+          },
+          "27, 15": {
+            "health": "0",
+            "stamina": "0",
+            "hunger": "0",
+            "joy": "-1",
+            "anxienty": "0"
+          },
+          "14, 0": {
+            "health": "0",
+            "stamina": "1/24",
+            "hunger": "0",
+            "joy": "0",
+            "anxienty": "0"
+          }
+        },
+        "activity": "1.00 2.00",
+        "anxienty": "0,85 1.15",
+        "anger_coeff": "1",
+        "joy_coeff": "1"
+},
+      "young": {
+        "health": {
+          "1, 1":{
+            "stamina": "-1",
+            "hunger": "0",
+            "tirst": "2",
+            "joy": "-100",
+            "activity": "-1",
+            "anger": "-100",
+            "anxienty": "-1"
+          },
+          "2,6": {
+            "stamina":"2",
+            "hunger": "3",
+            "thirst": "2",
+            "joy": "0",
+            "activity": "0,1",
+            "anger": "0",
+            "anxienty": "0"
+          },
+          "7,19": {
+            "stamina": "2",
+            "hunger": "3",
+            "thirst": "2",
+            "joy": "0",
+            "activity": "0,1",
+            "anger":"0",
+            "anxienty": "0"
+          },
+          "20,20": {
+            "stamina": "3",
+            "hunger": "2",
+            "thirst": "2",
+            "joy": "1",
+            "activity": "0,2",
+            "anger": "0",
+            "anxienty": "-0,1"
+          }
+        },
+        "stamina": {
+          "0,0": {
+            "health": "0",
+            "hunger": "3",
+            "thirst": "3"
+          },
+          "1,9": {
+            "health": "0",
+            "hunger": "2",
+            "thirst": "2"
+          },
+          "10,15": {
+            "health": "0",
+            "hunger": "1",
+            "thirst": "1"
+          }
+        },
+        "hunger": {
+          "30,30": {
+            "health": "-2",
+            "stamina": "-7",
+            "intestine": "-1",
+            "joy": "-8",
+            "activity": "-0,2",
+            "anger": "8",
+            "anxienty": "0,1"
+          },
+          "29,26": {
+            "health": "-1",
+            "stamina": "-2",
+            "intestine": "0",
+            "joy": "-5",
+            "activity": "-0,1",
+            "anger": "4",
+            "anxienty": "0,1"
+          },
+          "25,12": {
+            "health": "0",
+            "stamina": "0",
+            "intestine": "1",
+            "joy": "-1",
+            "activity": "0",
+            "anger": "0",
+            "anxienty": "0,1"
+          },
+          "11,6": {
+            "health": "0",
+            "stamina": "1",
+            "intestine": "2",
+            "joy": "1",
+            "activity": "0",
+            "anger": "-2",
+            "anxienty": "0"
+          },
+          "5,0": {
+            "health": "1",
+            "stamina": "1",
+            "intestine": "3",
+            "joy": "2",
+            "activity": "0,1",
+            "anger": "-3",
+            "anxienty": "-0,1"
+          }
+        },
+        "thirst": {
+          "30,30":{
+          "health": "-5",
+          "stamina": "-10",
+          "joy": "-10",
+          "activity": "-0,5",
+          "anger": "10",
+          "anxienty": "0,3"
+          },
+          "29,21":{
+            "health": "-1",
+            "stamina": "-2",
+            "joy": "-6",
+            "activity": "-0,3",
+            "anger": "5",
+            "anxienty": "0,15"
+          },
+          "20,7": {
+            "health": "0",
+            "stamina": "0",
+            "joy": "-1",
+            "activity": "0",
+            "anger": "0",
+            "anxienty": "0"
+          },
+          "6,0": {
+            "health": "0",
+            "stamina": "1",
+            "joy": "0",
+            "activity": "0",
+            "anger": "0",
+            "anxienty": "0"
+          },
+          "intestine": {
+            "30,28": {
+              "health": "-3",
+              "stamina": "-2",
+              "hunger": "-1",
+              "joy": "-2",
+              "anxienty": "0,1"
+            },
+            "27,15":{
+              "health": "0",
+              "stamina": "0",
+              "hunger": "0",
+              "joy": "-1",
+              "anxienty": "0",
+              "activity": "2"
+            },
+            "14,0": {
+              "health": "0",
+              "stamina": "0",
+              "hunger": "0",
+              "joy": "0",
+              "anxienty": "0"
+            }
+          }
+        },
+        "activity": {},
+        "anxienty": {},
+        "anger_coef": "-0,5",
+        "joy_coeff": "-2"
       },
+      "adult": {
+        "health": {},
+        "stamina": {},
+        "hunger": {},
+        "thirst": {},
+        "intestine": {},
+        "activity": "",
+        "anxienty": "",
+        "anger_coeff": "",
+        "joy_coeff": ""
+      },
+      "elder": {
+        "health": {},
+        "stamina": {},
+        "hunger": {},
+        "thirst": {},
+        "intstune": {},
+        "activity": "",
+        "anxienty": "",
+        "anger_coeff": "",
+        "joy_coeff": ""
+    }
+  }
+ }
+},
 
 
 
